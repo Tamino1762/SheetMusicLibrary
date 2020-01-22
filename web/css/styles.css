@@ -1,3 +1,8 @@
 header {
     font-family: "Comic Sans MS";
+    font-size: 3em;
+    text-align: center;
+}
+.container {
+    border: black 2px;
 }
