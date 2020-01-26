@@ -16,6 +16,31 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>List</title>
 </head>
+<body>
+<%--Navbar--%>
+<nav class="navbar navbar-dark bg-dark">
+    <!-- Navbar content -->
+    <a class="navbar-brand" href="#">Sheet Music Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.jsp">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="list.jsp">List<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="detail.jsp">Detail</a>
+            </li>
+        </ul>
+    </div>
+    <form class="form-inline">
+        <a class="btn btn-outline-success my-2 my-sm-0" href="login.jsp" role="button">Login</a>
+    </form>
+</nav>
     <h1>Sheet Music List</h1><br>
     <!-- Large modal -->
     <div id="modal">
@@ -69,8 +94,8 @@
             <div class="col">
                 <p><i>24 Caprices</i> by: N. Paganini</p> </div>
             <div class="col">
-            <button type="button"><i class="fas fa-pencil-alt"></i></button>
-                <button type="button"> <i class="far fa-trash-alt"></i></button>
+                <button type="button" class="btn btn-link"><i class="fas fa-pencil-alt"></i></button>
+                <button type="button" class="btn btn-link"> <i class="far fa-trash-alt"></i></button>
             </div>
 
         </div>
@@ -78,22 +103,22 @@
                 <div class="col">
                     <p><i>Linus and Lucy</i> by: Vince Guaraldi</p> </div>
                 <div class="col">
-                    <button type="button"><i class="fas fa-pencil-alt"></i></button>
-                    <button type="button"> <i class="far fa-trash-alt"></i></button>
+                    <button type="button" class="btn btn-link"><i class="fas fa-pencil-alt"></i></button>
+                    <button type="button" class="btn btn-link"> <i class="far fa-trash-alt"></i></button>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <p><i>Spellbound</i> by: Lacuna Coil</p> </div>
                 <div class="col">
-                    <button type="button"><i class="fas fa-pencil-alt"></i></button>
-                    <button type="button"> <i class="far fa-trash-alt"></i></button>
+                    <button type="button" class="btn btn-link"><i class="fas fa-pencil-alt"></i></button>
+                    <button type="button" class="btn btn-link"> <i class="far fa-trash-alt"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
-<body>
+
 <!--bootstrap & JQuery js-->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

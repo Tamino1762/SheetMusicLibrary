@@ -19,4 +19,12 @@ h1, h2, h3, h4, h5, h6 {
 body {
     background-color: navajowhite;
 }
-
+#jumboTron {
+    text-align: center;
+}
+#jumboTronButton {
+    float: right;
+}
+#jumboTronRight {
+    text-align: right;
+}
