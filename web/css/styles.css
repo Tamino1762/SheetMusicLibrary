@@ -6,3 +6,17 @@ header {
 .container {
     border: black 2px;
 }
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+#modal {
+    float: right;
+    padding-right: 10px;
+}
+#list {
+    text-align: center;
+}
+body {
+    background-color: navajowhite;
+}
+
