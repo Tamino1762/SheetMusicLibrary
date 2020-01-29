@@ -8,6 +8,7 @@ import java.sql.*;
 
 @WebServlet(name = "musicListServlet", urlPatterns = "/myappcontext/list")
 public class musicListServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
