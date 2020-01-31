@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 body {
     background-color: navajowhite;
+    /*background-image: url("images/needpix_com_edited_image.png");*/
 }
 #jumboTron {
     text-align: center;
@@ -27,4 +28,7 @@ body {
 }
 #jumboTronRight {
     text-align: right;
+}
+th, td, tr {
+    border-radius: 1px;
 }

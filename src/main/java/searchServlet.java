@@ -34,11 +34,11 @@ public class searchServlet extends HttpServlet {
             //path
             String absPath = getServletContext().getRealPath("/") + DATABASE_PATH;
 
-            StringBuilder sql = new StringBuilder("select title, composer, difficulty, instrument");
-            sql.append("from sheet_music");
-            sql.append("join detail on (sheet_music.detailId = detail.detailId");
-            sql.append("join detail on (detail.instrumentId = instrument.instrumentId");
-            sql.append("where title = ?");
+            StringBuilder sql = new StringBuilder("select title, composer, difficulty, type ");
+            sql.append("from sheet_music ");
+            sql.append("join detail on (sheet_music.detailId = detail.detailId) ");
+            sql.append("join instrument on (detail.instrumentId = instrument.instrumentId) ");
+            sql.append("where title = ?" );
 
             //connection
             conn = DriverManager.getConnection(DRIVER_NAME + absPath, SCHEMA, PASSWORD);
@@ -53,14 +53,14 @@ public class searchServlet extends HttpServlet {
             StringBuilder output = new StringBuilder();
 
             //html
-            output.append ("<html><head><link type='text/css' rel='stylesheet' href='css/styles.css'></head>");
+            output.append ("<html><head><link rel='stylesheet' href='css/styles.css'></head>");
             output.append("<body");
 
             //table
             output.append("<table>");
-            output.append("<tr>");
             //headers
-            output.append("<th>Title</th><th>Composer</th><th>Difficulty</th><th>Instrument</th>");
+            output.append("<tr>");
+            output.append("<th>Title: </th><th> Composer: </th><th> Difficulty: </th><th> Instrument: </th>");
             output.append("</tr>");
 
             while (rset.next()) {
@@ -69,14 +69,14 @@ public class searchServlet extends HttpServlet {
                 String title = rset.getString(1);
                 output.append("<td>" + title + "</td>");
 
-                String composer = rset.getString(1);
+                String composer = rset.getString(2);
                 output.append("<td>" + composer + "</td>");
 
-                String difficulty = rset.getString(1);
+                String difficulty = rset.getString(3);
                 output.append("<td>" + difficulty + "</td>");
 
-                String instrument = rset.getString(1);
-                output.append("<td>" + instrument + "</td>");
+                String type = rset.getString(4); //instrument type
+                output.append("<td>" + type + "</td>");
 
                 output.append("</tr>");
             }
