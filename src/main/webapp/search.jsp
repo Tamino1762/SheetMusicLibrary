@@ -24,7 +24,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.jsp">Home</a>
             </li>
             <li class="nav-item">
@@ -32,6 +32,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="detail.jsp">Detail</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="search.jsp">Search</a>
             </li>
         </ul>
     </div>

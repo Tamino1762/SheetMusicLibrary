@@ -35,6 +35,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="detail.jsp">Detail</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.jsp">Search</a>
+            </li>
         </ul>
     </div>
     <form class="form-inline">

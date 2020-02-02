@@ -35,6 +35,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="detail.jsp">Detail</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.jsp">Search</a>
+            </li>
         </ul>
     </div>
     <form class="form-inline">
@@ -43,7 +46,7 @@
 </nav>
 <div class="jumbotron">
     <h1 class="display-4">Sheet Music Library</h1>
-    <img src="images/violinart.jpg">
+    <img src="images/violinart.jpg" height="100" width="200" id="pic">
     <p class="lead" id="jumboTron">Keep all of your sheet music organized with this simple online library!</p>
     <hr class="my-4">
     <p id="jumboTronRight">Ready to organize?</p>

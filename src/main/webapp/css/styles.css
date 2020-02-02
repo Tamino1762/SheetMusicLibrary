@@ -32,3 +32,9 @@ body {
 th, td, tr {
     border-radius: 1px;
 }
+#pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 50%;*/
+}
