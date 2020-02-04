@@ -54,7 +54,7 @@ public class searchServlet extends HttpServlet {
 
             //html
             output.append ("<html><head><link rel='stylesheet' href='css/styles.css'></head>");
-            output.append("<body");
+            output.append("<body>");
 
             //table
             output.append("<table>");
