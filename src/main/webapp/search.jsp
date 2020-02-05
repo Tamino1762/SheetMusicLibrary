@@ -41,7 +41,8 @@
     <form class="form-inline">
         <a class="btn btn-outline-success my-2 my-sm-0" href="login.jsp" role="button">Login</a>
     </form>
-</nav>
+</nav><br>
+<div class="headFoot"><jsp:include page="header.jsp"></jsp:include></div><br>
 
     <header>Search Sheet Music</header><br><br>
 
@@ -51,7 +52,8 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title"><br>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-    </div>
+    </div><br>
+<div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
 
     <!--bootstrap & JQuery js-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

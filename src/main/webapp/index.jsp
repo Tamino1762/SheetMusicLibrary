@@ -43,7 +43,8 @@
     <form class="form-inline">
         <a class="btn btn-outline-success my-2 my-sm-0" href="login.jsp" role="button">Login</a>
     </form>
-</nav>
+</nav><br>
+<div class="headFoot"><jsp:include page="header.jsp"></jsp:include></div><br>
 <div class="jumbotron">
     <h1 class="display-4">Sheet Music Library</h1>
     <img src="images/violinart.jpg" height="100" width="200" id="pic">
@@ -51,7 +52,8 @@
     <hr class="my-4">
     <p id="jumboTronRight">Ready to organize?</p>
     <a class="btn btn-primary btn-lg" href="login.jsp" role="button" id="jumboTronButton">Login</a>
-</div>
+</div><br>
+<div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
 <!--bootstrap & JQuery js-->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

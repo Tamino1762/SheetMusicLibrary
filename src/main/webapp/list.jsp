@@ -43,7 +43,8 @@
     <form class="form-inline">
         <a class="btn btn-outline-success my-2 my-sm-0" href="login.jsp" role="button">Login</a>
     </form>
-</nav>
+</nav><br>
+<div class="headFoot"><jsp:include page="header.jsp"></jsp:include></div><br>
     <h1>Sheet Music List</h1><br>
     <!-- Large modal -->
     <div id="modal">
@@ -119,7 +120,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br>
+<div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
 
 
 <!--bootstrap & JQuery js-->
