@@ -1,14 +1,15 @@
 package entity;
 
-public class music {
+public class Music {
 
     private String title;
     private String composer;
     private String difficulty;
-    private String instrument;
+    private String type;
 
-    public music() {
+    public Music() {
     }
+
 
     public String getTitle() {
         return title;
@@ -34,11 +35,11 @@ public class music {
         this.difficulty = difficulty;
     }
 
-    public String getInstrument() {
-        return instrument;
+    public String getType() {
+        return type;
     }
 
-    public void setInstrument(String instrument) {
-        this.instrument = instrument;
+    public void setType(String type) {
+        this.type = type;
     }
 }
