@@ -29,8 +29,13 @@ body {
 #jumboTronRight {
     text-align: right;
 }
-th, td, tr {
+#list2, td, tr, th {
     border-radius: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    text-align: center;
+    width: 50%;
 }
 #pic {
     display: block;
@@ -40,4 +45,8 @@ th, td, tr {
 }
 .headFoot{
     text-align: center;
+}
+#search {
+    width: 28%;
+    border: black 2px;
 }

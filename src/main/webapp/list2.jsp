@@ -4,12 +4,14 @@
 <html>
 <head>
     <title>List 2</title>
-
+<jsp:include page="cssLinks.jsp"></jsp:include>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include><br>
+<jsp:include page="navbar.jsp"></jsp:include><br>
+<div class="headFoot"><jsp:include page="header.jsp"></jsp:include><br></div>
 
 <%--<p><%= request.getAttribute("myMusic") %></p>--%>
+<div id="list2">
 <table>
     <tr>
         <th>Title</th>
@@ -27,11 +29,9 @@
         </tr>
     </c:forEach>
 </table>
+</div> <br>
 
-
-
-
-
-<jsp:include page="footer.jsp"></jsp:include>
+<div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
+<jsp:include page="jsLinks.jsp"></jsp:include>
 </body>
 </html>
