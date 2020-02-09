@@ -21,7 +21,7 @@
     <header>Search Sheet Music</header><br><br>
 
     <div class="container" id="search">
-    <form class="form-inline my-2 my-lg-0"  id="searchForm" method="get" action="myappcontext/search">
+    <form class="form-inline my-2 my-lg-0"  id="searchForm" method="get" action="search2">
         <b>Search by title</b> &nbsp
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title"><br>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
