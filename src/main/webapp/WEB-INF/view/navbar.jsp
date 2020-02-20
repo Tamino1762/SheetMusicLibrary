@@ -7,20 +7,20 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.jsp">Home </a>
+                <a class="nav-link" href="index">Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="list.jsp">List</a>
+                <a class="nav-link" href="list">List</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="detail.jsp">Detail</a>
+                <a class="nav-link" href="detail">Detail</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="search.jsp">Search</a>
+                <a class="nav-link" href="search">Search</a>
             </li>
         </ul>
     </div>
     <form class="form-inline">
-        <a class="btn btn-outline-success my-2 my-sm-0" href="login.jsp" role="button">Login</a>
+        <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button">Login</a>
     </form>
 </nav>
