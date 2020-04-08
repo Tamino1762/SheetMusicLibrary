@@ -1,45 +1,25 @@
 package entity;
 
+import javax.annotation.sql.DataSourceDefinition;
+import javax.persistence.*;
+
+import lombok.Data;
+@Data
+@Entity
+@Table(name = "sheet_music")
 public class Music {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "musicid")
+    private int musicId;
+
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "composer")
     private String composer;
-    private String difficulty;
-    private String type;
 
-    public Music() {
-    }
-
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getComposer() {
-        return composer;
-    }
-
-    public void setComposer(String composer) {
-        this.composer = composer;
-    }
-
-    public String getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(String difficulty) {
-        this.difficulty = difficulty;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
+    @Column(name = "detailid")
+    private int detailId;
 }

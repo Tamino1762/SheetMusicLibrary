@@ -1,16 +1,20 @@
 package entity;
 
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Data
+@Entity
+@Table(name = "instrument")
 public class MusicInstrument {
-    String type;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "instrumentid")
+    private int instrumentId;
 
-    public MusicInstrument() {
-    }
+    @Column(name = "type")
+    private String type;
 
-    public String getType() {
-        return type;
-    }
 
-    public void setType(String type) {
-        this.type = type;
-    }
 }
