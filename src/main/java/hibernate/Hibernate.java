@@ -1,8 +1,11 @@
 package hibernate;
 
 import entity.Music;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.util.List;
 
 public class Hibernate {
 
@@ -18,8 +21,28 @@ public class Hibernate {
 
     public static void main(String[] args) {
         Hibernate hibernate = new Hibernate();
-        Music m;
+       List<Music> musicList = hibernate.getAllMusic();
+
+       for(Music m : musicList){
+           System.out.println(m);
+       }
 
 
+
+
+        hibernate.close();
+
+    }
+
+    public List<Music> getAllMusic(){
+        Session session = factory.getCurrentSession();
+
+        session.beginTransaction();
+
+        List list = session.createQuery("from Music").getResultList();
+
+        session.getTransaction().commit();
+
+        return list;
     }
 }
