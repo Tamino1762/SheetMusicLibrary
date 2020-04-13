@@ -31,6 +31,11 @@
         <mapping class="edu.wctc.hibernate.entity.DonutShop"/>
         <mapping class="edu.wctc.hibernate.entity.DonutShopDetail"/>
         <mapping class="edu.wctc.hibernate.entity.Image"/>-->
+        <mapping class="entity.Music"/>
+        <mapping class="entity.MusicInstrument"/>
+        <mapping class="entity.Format"/>
+        <mapping class="entity.MusicDetail"/>
+        <mapping class="entity.Publisher"/>
     </session-factory>
 
 </hibernate-configuration>
