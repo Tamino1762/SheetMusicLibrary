@@ -36,4 +36,34 @@ public class Music {
 
     public Music() {
     }
+
+    public int getMusicId() {
+        return musicId;
+    }
+
+    public void setMusicId(int musicId) {
+        this.musicId = musicId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getComposer() {
+        return composer;
+    }
+
+    public void setComposer(String composer) {
+        this.composer = composer;
+    }
+
+    public void setType(String string) {
+    }
+
+    public void setDifficulty(String string) {
+    }
 }
