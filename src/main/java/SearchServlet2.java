@@ -56,18 +56,18 @@ public class SearchServlet2 extends HttpServlet {
 
             List<Music> musicList = new ArrayList<Music>();
 
-            while (rset.next()) {
+          /*  while (rset.next()) {
                 Music music = new Music();
-                /*MusicDetail difficulty = new MusicDetail();
+                *//*MusicDetail difficulty = new MusicDetail();
                 MusicInstrument type = new MusicInstrument();
-*/
+*//*
                 music.setTitle(rset.getString(1));
                 music.setComposer(rset.getString(2));
                 music.setType(rset.getString(3));
                 music.setDifficulty(rset.getString(4));
                 musicList.add(music);
             }
-
+*/
             request.setAttribute("musicPiece", musicList);
             request.getRequestDispatcher("search2.jsp").forward(request, response);
 

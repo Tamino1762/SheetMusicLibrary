@@ -16,22 +16,4 @@ public class MusicInstrument {
     @Column(name = "type")
     private String type;
 
-    public int getInstrumentId() {
-        return instrumentId;
-    }
-
-    public void setInstrumentId(int instrumentId) {
-        this.instrumentId = instrumentId;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public MusicInstrument() {
-    }
 }

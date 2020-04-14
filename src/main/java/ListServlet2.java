@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Data;
 
 @WebServlet(name = "ListServlet2", urlPatterns = "/list2")
 public class ListServlet2 extends HttpServlet {
@@ -40,14 +41,14 @@ public class ListServlet2 extends HttpServlet {
 
             List<Music> musicList = new ArrayList<Music>();
 
-            while(rset.next()){
+            /*while(rset.next()){
                 Music music = new Music();
                 music.setTitle(rset.getString(1));
                 music.setComposer(rset.getString(2));
                 music.setType(rset.getString(3));
                 music.setDifficulty(rset.getString(4));
                 musicList.add(music);
-            }
+            }*/
             request.setAttribute("myMusic", musicList);
             request.getRequestDispatcher("list2.jsp").forward(request, response);
 

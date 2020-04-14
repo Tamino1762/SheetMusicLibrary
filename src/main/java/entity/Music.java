@@ -5,7 +5,6 @@ import javax.persistence.*;
 
 import lombok.Data;
 
-import java.util.List;
 
 @Data
 @Entity
@@ -24,46 +23,16 @@ public class Music {
     @Column(name = "composer")
     private String composer;
 
-    @OneToMany(cascade = {CascadeType.DETACH,
-            CascadeType.MERGE,
-            CascadeType.PERSIST,
-            CascadeType.REFRESH})
-    @JoinTable(name = "detail",
-        joinColumns = @JoinColumn(name = "detailid"),
-        inverseJoinColumns = @JoinColumn(name = "detailid"))
-    @Column(name = "detailid")
-    private List<Music> detailId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "detailid")
+    private MusicDetail detail;
 
-    public Music() {
-    }
 
-    public int getMusicId() {
-        return musicId;
-    }
-
-    public void setMusicId(int musicId) {
-        this.musicId = musicId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
+    public Music(String title, String composer) {
         this.title = title;
-    }
-
-    public String getComposer() {
-        return composer;
-    }
-
-    public void setComposer(String composer) {
         this.composer = composer;
     }
+    public Music(){
 
-    public void setType(String string) {
-    }
-
-    public void setDifficulty(String string) {
     }
 }

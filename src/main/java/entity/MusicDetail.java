@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.sound.midi.Instrument;
-import java.util.List;
 
 @Data
 @Entity
@@ -16,45 +15,30 @@ public class MusicDetail {
     @Column(name = "detailid")
     private int detailId;
 
+  @OneToOne(mappedBy = "detail", cascade = CascadeType.ALL)
+    private Music music;
+
     @ManyToOne(cascade = {CascadeType.DETACH,
             CascadeType.MERGE,
             CascadeType.PERSIST,
             CascadeType.REFRESH})
-    @JoinTable(name = "sheet_music",
-               joinColumns = @JoinColumn(name = "musicid"),
-                inverseJoinColumns = @JoinColumn(name = "musicid"))
-    @Column(name = "musicid")
-    private Music musicId;
+    @JoinColumn(name = "formatid")
+    private Format format;
 
-    @OneToOne(cascade = {CascadeType.DETACH,
+    @ManyToOne(cascade = {CascadeType.DETACH,
             CascadeType.MERGE,
             CascadeType.PERSIST,
             CascadeType.REFRESH})
-    @JoinTable(name = "format",
-            joinColumns = @JoinColumn(name = "formatid"),
-            inverseJoinColumns = @JoinColumn(name = "formatid"))
-    @Column(name = "formatid")
-    private Format formatId;
+    @JoinColumn(name = "instrumentid")
+    private MusicInstrument instrument;
 
-    @OneToOne(cascade = {CascadeType.DETACH,
+    @ManyToOne(cascade = {CascadeType.DETACH,
             CascadeType.MERGE,
             CascadeType.PERSIST,
             CascadeType.REFRESH})
-    @JoinTable(name = "instrument",
-            joinColumns = @JoinColumn(name = "instrumentid"),
-            inverseJoinColumns = @JoinColumn(name = "instrumentid"))
-    @Column(name = "instrumentid")
-    private MusicInstrument instrumentId;
+    @JoinColumn(name = "publisherid")
+    private Publisher publisher;
 
-    @ManyToMany(cascade = {CascadeType.DETACH,
-            CascadeType.MERGE,
-            CascadeType.PERSIST,
-            CascadeType.REFRESH})
-    @JoinTable(name = "publisher",
-            joinColumns = @JoinColumn(name = "publisherid"),
-            inverseJoinColumns = @JoinColumn(name = "publisherid"))
-    @Column(name = "publisherid")
-    private List<Publisher> publisherId;
 
     @Column(name = "difficulty")
     private String difficulty;
@@ -62,62 +46,12 @@ public class MusicDetail {
     @Column(name = "editor")
     private String editor;
 
-    public int getDetailId() {
-        return detailId;
-    }
-
-    public void setDetailId(int detailId) {
-        this.detailId = detailId;
-    }
-
-    public Music getMusicId() {
-        return musicId;
-    }
-
-    public void setMusicId(Music musicId) {
-        this.musicId = musicId;
-    }
-
-    public Format getFormatId() {
-        return formatId;
-    }
-
-    public void setFormatId(Format formatId) {
-        this.formatId = formatId;
-    }
-
-    public MusicInstrument getInstrumentId() {
-        return instrumentId;
-    }
-
-    public void setInstrumentId(MusicInstrument instrumentId) {
-        this.instrumentId = instrumentId;
-    }
-
-    public List<Publisher> getPublisherId() {
-        return publisherId;
-    }
-
-    public void setPublisherId(List<Publisher> publisherId) {
-        this.publisherId = publisherId;
-    }
-
-    public String getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(String difficulty) {
+    public MusicDetail (Music music, MusicInstrument instrument, String difficulty, String editor, Publisher publisher){
+        this.music = music;
+        this.instrument = instrument;
         this.difficulty = difficulty;
-    }
-
-    public String getEditor() {
-        return editor;
-    }
-
-    public void setEditor(String editor) {
         this.editor = editor;
+        this.publisher = publisher;
     }
-
-    public MusicDetail() {
-    }
+    public MusicDetail(){}
 }
