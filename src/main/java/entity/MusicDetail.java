@@ -1,11 +1,14 @@
 package entity;
 
 import lombok.Data;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
 import javax.sound.midi.Instrument;
 
-@Data
+@Service
+@Controller
 @Entity
 @Table(name = "detail")
 public class MusicDetail {
