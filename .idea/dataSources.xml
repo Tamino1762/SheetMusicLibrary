@@ -17,5 +17,15 @@ D:/School/SheetMusicLibrary/src/main/hibernate.cfg.xml</remarks>
       <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
       <jdbc-url>jdbc:derby:db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="f82533fb-8ea9-4368-b63d-ced8773567be">
+      <driver-ref>derby.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+D:/School/SheetMusicLibrary/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
+      <jdbc-url>jdbc:derby:db</jdbc-url>
+    </data-source>
   </component>
 </project>

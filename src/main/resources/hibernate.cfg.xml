@@ -24,13 +24,6 @@
         <!-- Set the current session context -->
         <property name="current_session_context_class">thread</property>
 
-        <!-- List the entity classes that contain table mappings -->
-       <!-- <mapping class="edu.wctc.hibernate.entity.City"/>
-        <mapping class="edu.wctc.hibernate.entity.Donut"/>
-        <mapping class="edu.wctc.hibernate.entity.DonutReview"/>
-        <mapping class="edu.wctc.hibernate.entity.DonutShop"/>
-        <mapping class="edu.wctc.hibernate.entity.DonutShopDetail"/>
-        <mapping class="edu.wctc.hibernate.entity.Image"/>-->
         <mapping class="entity.Music"/>
         <mapping class="entity.MusicInstrument"/>
         <mapping class="entity.Format"/>
