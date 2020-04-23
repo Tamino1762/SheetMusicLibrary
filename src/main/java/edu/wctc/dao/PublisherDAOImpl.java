@@ -27,6 +27,6 @@ public class PublisherDAOImpl implements PublisherDAO {
         Session session = sessionFactory.getCurrentSession();
 
         Publisher aPublisher = session.get(Publisher.class, id);
-        return null;
+        return aPublisher;
     }
 }

@@ -1,10 +1,13 @@
 package entity;
 
 import lombok.Data;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
 
-@Data
+@Controller
+@Service
 @Entity
 @Table(name = "publisher")
 public class Publisher {
