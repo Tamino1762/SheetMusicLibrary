@@ -1,11 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 1/22/2020
-  Time: 1:22 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
 <jsp:include page="cssLinks.jsp"></jsp:include>
@@ -65,30 +61,35 @@
     </div><%--end modal--%>
     <div id="list">
         <div class="container">
-        <div class="row">
-            <div class="col">
-                <p><i>24 Caprices</i> by: N. Paganini</p> </div>
-            <div class="col">
-                <button type="button" class="btn btn-link"><i class="fas fa-pencil-alt"></i></button>
-                <button type="button" class="btn btn-link"> <i class="far fa-trash-alt"></i></button>
-            </div>
+            <div id="content">
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Composer</th>
+                    </tr>
+                    <c:forEach var="tempMusic" items="${music}">
+                        <c:url var="updateLink" value="/music/showUpdateMusicForm">
+                            <c:param name="musicId" value="${tempMusic.id}"/>
+                        </c:url>
+                        <c:url var="deleteLink" value="/music/delete">
+                            <c:param name="id" value="${tempMusic.id}"/>
+                        </c:url>
 
-        </div>
-            <div class="row">
-                <div class="col">
-                    <p><i>Linus and Lucy</i> by: Vince Guaraldi</p> </div>
-                <div class="col">
-                    <button type="button" class="btn btn-link"><i class="fas fa-pencil-alt"></i></button>
-                    <button type="button" class="btn btn-link"> <i class="far fa-trash-alt"></i></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p><i>Spellbound</i> by: Lacuna Coil</p> </div>
-                <div class="col">
-                    <button type="button" class="btn btn-link"><i class="fas fa-pencil-alt"></i></button>
-                    <button type="button" class="btn btn-link"> <i class="far fa-trash-alt"></i></button>
-                </div>
+                        <tr>
+                        <td>${tempMusic.title}</td>
+                        <td>${tempMusic.composer}</td>
+                        <td>
+                            <a href="${updateLink}"><i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td>
+                            <a href="${deleteLink}" onclick="if (!confirm('Are you sure?')) return false">
+                                <i class="far fa-trash-alt"></i>
+                                </a>
+                        </td>
+
+                        </tr>
+                    </c:forEach>
+                </table>
             </div>
         </div>
     </div><br>
