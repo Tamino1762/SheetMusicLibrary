@@ -20,7 +20,7 @@ public class MusicDAOImpl implements MusicDAO{
         Session session = sessionFactory.getCurrentSession();
 
         //Music List
-        List<Music> musicList= session.createQuery("from Music , Music .class").getResultList();
+        List<Music> musicList= session.createQuery("from Music" , Music .class).getResultList();
 
         return musicList;
     }

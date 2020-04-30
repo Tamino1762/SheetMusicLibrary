@@ -23,7 +23,7 @@ public class HomeController {
 
   @RequestMapping("/search")
     public String showSearch() {
-        return "search2";
+        return "search";
   }
   @RequestMapping("/detail")
     public String showDetail(){

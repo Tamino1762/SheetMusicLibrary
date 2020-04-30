@@ -7,8 +7,7 @@ import org.springframework.stereotype.Service;
 import javax.persistence.*;
 import javax.sound.midi.Instrument;
 
-@Service
-@Controller
+@Data
 @Entity
 @Table(name = "detail")
 public class MusicDetail {

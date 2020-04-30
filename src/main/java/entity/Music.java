@@ -8,8 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 
-@Controller
-@Service
+@Data
 @Entity
 @Table(name = "sheet_music")
 public class Music {

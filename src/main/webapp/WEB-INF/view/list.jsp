@@ -69,10 +69,10 @@
                     </tr>
                     <c:forEach var="tempMusic" items="${music}">
                         <c:url var="updateLink" value="/music/showUpdateMusicForm">
-                            <c:param name="musicId" value="${tempMusic.id}"/>
+                            <c:param name="musicId" value="${tempMusic.musicId}"/>
                         </c:url>
                         <c:url var="deleteLink" value="/music/delete">
-                            <c:param name="id" value="${tempMusic.id}"/>
+                            <c:param name="id" value="${tempMusic.musicId}"/>
                         </c:url>
 
                         <tr>

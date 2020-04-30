@@ -47,7 +47,7 @@ public class MusicController {
 
         theModel.addAttribute("music", musicList);
 
-        return "list-music";
+        return "list";
     }
 
     @RequestMapping("/user/showAddMusicForm")

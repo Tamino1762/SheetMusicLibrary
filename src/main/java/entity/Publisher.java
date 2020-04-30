@@ -6,8 +6,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
 
-@Controller
-@Service
+@Data
 @Entity
 @Table(name = "publisher")
 public class Publisher {
@@ -19,14 +18,4 @@ public class Publisher {
 
     @Column(name="publisher")
     private String publisher;
-
-    @Column(name = "publisher2")
-    private String publisher2;
-
-    @Column(name = "publisher3")
-    private String publisher3;
-
-    @Column(name = "publisher4")
-    private String publisher4;
-
 }
