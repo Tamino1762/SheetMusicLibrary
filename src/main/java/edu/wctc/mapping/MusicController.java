@@ -78,7 +78,7 @@ public class MusicController {
 
         theModel.addAttribute("publisher", publisherService.getPublisher());
 
-        return "music-form";
+        return "form";
     }
     @PostMapping("/save")
     public String saveMusic(@Valid @ModelAttribute("music") Music theMusic,
@@ -93,7 +93,7 @@ public class MusicController {
             theModel.addAttribute("instrument", instrumentService.getInstrument());
             theModel.addAttribute("publisher", publisherService.getPublisher());
 
-            return "music-form";
+            return "form";
         }
 
             return "redirect:/music/list";

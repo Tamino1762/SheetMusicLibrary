@@ -5,6 +5,7 @@
 <html>
 <head>
 <jsp:include page="cssLinks.jsp"></jsp:include>
+    <%--<link type="text/css" rel="stylesheet" href="${cp}WEB-INF/resources/css/styles.css">--%>
     <title>List</title>
 </head>
 <body>
@@ -13,52 +14,10 @@
 <br>
 <div class="headFoot"><jsp:include page="header.jsp"></jsp:include></div><br>
     <h1>Sheet Music List</h1><br>
-    <!-- Large modal -->
-    <div id="modal">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Music</button>
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <h3>Add Music</h3>
-               <!--content here-->
-                <input class="form-control form-control-sm" type="text" placeholder="Title"><br>
-                <input class="form-control form-control-sm" type="text" placeholder="Composer"><br>
-                <input class="form-control form-control-sm" type="text" placeholder="Publisher"><br>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Instrument</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="instrument">
-                        <option>Guitar</option>
-                        <option>Piano</option>
-                        <option>Violin</option>
-                        <option>Viola</option>
-                        <option>Other</option>
-                    </select>
-                </div><br>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Format</label>
-                    <select class="form-control" id="exampleFormControlSelect2" name="format">
-                        <option>Book</option>
-                        <option>Electronic</option>
-                        <option>Magazine</option>
-                        <option>Single Sheet</option>
-                        <option>Other</option>
-                    </select>
-                </div><br>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                        <div class="col">
-                            <button type="reset" id="reset" class="btn btn-primary">Reset</button>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div><%--end modal--%>
+   <button class="add-button"
+           onclick="window.location.href='${cp}/music/user/showAddMusicForm'; return false">
+       Add Music
+   </button>
     <div id="list">
         <div class="container">
             <div id="content">
@@ -97,8 +56,5 @@
 
 
 <jsp:include page="jsLinks.jsp"></jsp:include>
-<script>$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-})</script>
 </body>
 </html>
