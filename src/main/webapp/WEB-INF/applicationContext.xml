@@ -15,37 +15,7 @@
                            http://www.springframework.org/schema/tx/spring-tx.xsd
                            http://www.springframework.org/schema/security
                            http://www.springframework.org/schema/security/spring-security.xsd">
-    <!-- BEGIN SECURITY CONFIGURATION -->
 
-    <security:http use-expressions="true" authentication-manager-ref="myAuthenticationManager" >
-        <security:intercept-url pattern="/music/admin/**" access="hasRole('ADMIN')"/>
-        <security:intercept-url pattern="/music/user/**" access="hasRole('USER')"/>
-        <security:intercept-url pattern="/resources/**" access="permitAll()"/>
-        <security:intercept-url pattern="/**" access="permitAll()" />
-
-        <!-- We don't need to write a mapping for "authenticate"
-        Spring understands how to process login if we name everything correctly -->
-        <security:form-login
-                login-page="/showLoginForm"
-                login-processing-url="/authenticate"
-                authentication-failure-url="/showLoginForm?error=true"
-                username-parameter="username"
-                password-parameter="password"
-                default-target-url="/music/list"/>
-        <security:logout logout-url="/logout"
-                         logout-success-url="/showLoginForm?logout=true"/>
-    </security:http>
-
-    <security:authentication-manager id="myAuthenticationManager" >
-        <security:authentication-provider>
-            <security:user-service id="myUserService">
-                <security:user name="user" password="p" authorities="USER"/>
-                <security:user name="admin" password="p" authorities="USER,ADMIN"/>
-            </security:user-service>
-        </security:authentication-provider>
-    </security:authentication-manager>
-
-    <!-- END SECURITY CONFIGURATION -->
 
     <!-- BEGIN NEW HIBERNATE CONFIGURATION -->
 

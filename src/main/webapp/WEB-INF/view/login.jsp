@@ -9,6 +9,7 @@
 </head>
 <body>
 <div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
+<jsp:include page="navbar.jsp"></jsp:include>
 <div id="container">
     <div id="content">
         <h3>Login</h3>

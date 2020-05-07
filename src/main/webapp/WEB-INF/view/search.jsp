@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 1/29/2020
-  Time: 1:42 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,11 +15,11 @@
     <header>Search Sheet Music</header><br><br>
 
     <div class="container" id="search">
-    <form class="form-inline my-2 my-lg-0"  id="searchForm" method="get" action="search2">
+    <form:form class="form-inline my-2 my-lg-0"  id="searchForm" method="GET" action="search">
         <b>Search by title</b> &nbsp
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title"><br>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm"><br>
+        <button class="btn btn-outline-success my-2 my-sm-0" input type="submit" value="Search">Search</button>
+    </form:form>
     </div><br>
 <div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
 <jsp:include page="jsLinks.jsp"></jsp:include>

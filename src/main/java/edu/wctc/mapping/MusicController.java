@@ -33,7 +33,7 @@ public class MusicController {
     @Autowired
     private PublisherService publisherService;
 
-    @GetMapping("/delete")
+    @GetMapping("/admin/delete")
     public String deleteMusic(@RequestParam("musicId") int theId) {
 
             musicService.deleteMusic(theId);
@@ -65,7 +65,7 @@ public class MusicController {
         return "music-form";
     }
 
-    @RequestMapping("/showUpdateMusicForm") //@RequestParam("musicId"), ??
+    @RequestMapping("/user/showUpdateMusicForm") //@RequestParam("musicId"), ??
     public String showUpdateMusicForm(int theId, Model theModel){
 
         Music theMusic = musicService.getMusic(theId);
@@ -80,7 +80,8 @@ public class MusicController {
 
         return "form";
     }
-    @PostMapping("/save")
+    @GetMapping("user/showUpdateMusicForm")
+    @PostMapping("/user/save")
     public String saveMusic(@Valid @ModelAttribute("music") Music theMusic,
                             BindingResult bindingResult,
                             Model theModel){
@@ -106,7 +107,7 @@ public class MusicController {
 
         theModel.addAttribute("music", matchingMusic);
 
-        return "list-music";
+        return "list";
     }
 
     @InitBinder
