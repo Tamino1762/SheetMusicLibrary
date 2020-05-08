@@ -20,7 +20,7 @@ public class HomeController {
     }
 
     @RequestMapping("/login")
-    public String showLogin() {
+    public String showLoginForm() {
         return "login";
     }
 

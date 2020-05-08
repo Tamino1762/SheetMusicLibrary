@@ -7,8 +7,8 @@
                            http://www.springframework.org/schema/security
                            http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <!-- Bean for bcrypt password encoding -->
-    <bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+   <!-- &lt;!&ndash; Bean for bcrypt password encoding &ndash;&gt;
+    <bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>-->
 
     <!-- BEGIN SECURITY CONFIGURATION -->
     <security:http use-expressions="true">
@@ -35,7 +35,7 @@
                   <security:user name="stacy" password="p" authorities="USER,ADMIN"/>
               </security:user-service>-->
             <security:jdbc-user-service data-source-ref="myDataSource"/>
-            <security:password-encoder ref="bcryptEncoder"/>
+           <!-- <security:password-encoder ref="bcryptEncoder"/>-->
         </security:authentication-provider>
     </security:authentication-manager>
 

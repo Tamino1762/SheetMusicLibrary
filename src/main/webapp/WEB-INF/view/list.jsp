@@ -5,7 +5,7 @@
 <html>
 <head>
 <%@include file="cssLinks.jsp"%>
-    <%--<link type="text/css" rel="stylesheet" href="${cp}WEB-INF/resources/css/styles.css">--%>
+
     <title>List</title>
 </head>
 <body>

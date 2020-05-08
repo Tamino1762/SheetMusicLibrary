@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index">Home</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="music/list">List</a>
@@ -18,6 +18,6 @@
         </ul>
     </div>
     <form class="form-inline">
-        <a class="btn btn-outline-success my-2 my-sm-0" href="login" role="button">Login</a>
+        <a class="btn btn-outline-success my-2 my-sm-0" href="${pageContext.request.contextPath}/showLoginForm" role="button">Login</a>
     </form>
 </nav>

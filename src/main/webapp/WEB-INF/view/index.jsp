@@ -16,7 +16,7 @@
     <p class="lead" id="jumboTron">Keep all of your sheet music organized with this simple online library!</p>
     <hr class="my-4">
     <p id="jumboTronRight">Ready to organize?</p>
-    <a class="btn btn-primary btn-lg" href="login" role="button" id="jumboTronButton">Login</a>
+    <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/showLoginForm" role="button" id="jumboTronButton">Login</a>
 </div><br>
 <div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
 <!--bootstrap & JQuery js-->

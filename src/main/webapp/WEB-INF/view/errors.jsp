@@ -13,7 +13,7 @@
     </div>
     <div style="clear: both;">
         <p>
-            <a href="${cp}/music/list">Back To List</a>
+            <a href="${pageContext.request.contextPath}/music/list">Back To List</a>
         </p>
     </div>
 </div>
