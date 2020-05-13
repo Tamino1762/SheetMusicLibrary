@@ -1,11 +1,8 @@
 package entity;
 
-import javax.annotation.sql.DataSourceDefinition;
-import javax.persistence.*;
-
 import lombok.Data;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
+
+import javax.persistence.*;
 
 
 @Data

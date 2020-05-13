@@ -62,11 +62,12 @@ public class MusicController {
 
         theModel.addAttribute("publisher", publisherService.getPublisher());
 
-        return "music-form";
+        return "form";
     }
 
-    @RequestMapping("/user/showUpdateMusicForm") //@RequestParam("musicId"), ??
-    public String showUpdateMusicForm(int theId, Model theModel){
+    @RequestMapping("/user/showUpdateMusicForm")
+
+    public String showUpdateMusicForm(@RequestParam("musicId") int theId, Model theModel){
 
         Music theMusic = musicService.getMusic(theId);
 
@@ -80,7 +81,7 @@ public class MusicController {
 
         return "form";
     }
-    @GetMapping("user/showUpdateMusicForm")
+   // @GetMapping("/user/showUpdateMusicForm")
     @PostMapping("/user/save")
     public String saveMusic(@Valid @ModelAttribute("music") Music theMusic,
                             BindingResult bindingResult,
@@ -96,6 +97,8 @@ public class MusicController {
 
             return "form";
         }
+
+        musicService.saveMusic(theMusic);
 
             return "redirect:/music/list";
 

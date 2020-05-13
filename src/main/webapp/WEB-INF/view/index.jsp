@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -18,6 +19,19 @@
     <p id="jumboTronRight">Ready to organize?</p>
     <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/showLoginForm" role="button" id="jumboTronButton">Login</a>
 </div><br>
+<c:choose>
+    <c:when
+            test="${pageContext.request.userPrincipal != mull}">
+        Hello <strong>
+            ${pageContext.request.userPrincipal.name}
+    </strong>
+        &nbsp; | &nbsp;
+        <a href="${cp}/logout">Logout</a>
+    </c:when>
+    <c:otherwise>
+        <a href="${cp/showLoginForm}">Login</a>
+    </c:otherwise>
+</c:choose>
 <div class="headFoot"><jsp:include page="footer.jsp"></jsp:include></div>
 <!--bootstrap & JQuery js-->
 <jsp:include page="jsLinks.jsp"></jsp:include>

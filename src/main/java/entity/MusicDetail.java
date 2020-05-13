@@ -20,24 +20,27 @@ public class MusicDetail {
   @OneToOne(mappedBy = "detail", cascade = CascadeType.ALL)
     private Music music;
 
-    @ManyToOne(cascade = {CascadeType.DETACH,
-            CascadeType.MERGE,
-            CascadeType.PERSIST,
-            CascadeType.REFRESH})
+    @ManyToOne(cascade =
+             {CascadeType.DETACH,
+             CascadeType.MERGE,
+             CascadeType.PERSIST,
+             CascadeType.REFRESH})
     @JoinColumn(name = "formatid")
     private Format format;
 
-    @ManyToOne(cascade = {CascadeType.DETACH,
-            CascadeType.MERGE,
-            CascadeType.PERSIST,
-            CascadeType.REFRESH})
+    @ManyToOne(cascade =
+             {CascadeType.DETACH,
+             CascadeType.MERGE,
+             CascadeType.PERSIST,
+             CascadeType.REFRESH})
     @JoinColumn(name = "instrumentid")
     private MusicInstrument instrument;
 
-    @ManyToOne(cascade = {CascadeType.DETACH,
-            CascadeType.MERGE,
-            CascadeType.PERSIST,
-            CascadeType.REFRESH})
+    @ManyToOne(cascade =
+             {CascadeType.DETACH,
+             CascadeType.MERGE,
+             CascadeType.PERSIST,
+             CascadeType.REFRESH})
     @JoinColumn(name = "publisherid")
     private Publisher publisher;
 
@@ -48,12 +51,12 @@ public class MusicDetail {
     @Column(name = "editor")
     private String editor;
 
-    public MusicDetail (Music music, MusicInstrument instrument, String difficulty, String editor, Publisher publisher){
+   /* public MusicDetail (Music music, MusicInstrument instrument, String difficulty, String editor, Publisher publisher){
         this.music = music;
         this.instrument = instrument;
         this.difficulty = difficulty;
         this.editor = editor;
         this.publisher = publisher;
-    }
+    }*/
     public MusicDetail(){}
 }

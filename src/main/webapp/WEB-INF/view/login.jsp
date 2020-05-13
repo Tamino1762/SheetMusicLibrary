@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -15,12 +15,7 @@
         <h3>Login</h3>
         <form:form action="${cp}/authenticate" method="POST">
             <table>
-             <%--   <!-- Only show this message if the user has been logged out -->
-                <c:if test="${param.logout != null}">
-                <tr>
-                    <td></td>
-                    <td>You have been logged out</td>
-                </tr>--%>
+
                 <tr>
                     <td><label>Username</label></td>
                     <td><input type="text" name="username" <%--value="user"--%>></td>
@@ -40,6 +35,13 @@
                     </tr>
                 </c:if>
             </table>
+            <!-- Only show this message if the user has been logged out -->
+            <c:if test="${param.logout != null}">
+                <tr>
+                    <td></td>
+                    <td>You have been logged out</td>
+                </tr>
+            </c:if>
         </form:form>
     </div>
     <jsp:include page="footer.jsp"></jsp:include>

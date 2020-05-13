@@ -7,5 +7,5 @@ import java.util.List;
 public interface InstrumentService {
     List<MusicInstrument> getInstrument();
 
-    MusicInstrument getInstrument(int id);
+    MusicInstrument getInstrument(int instrumentId);
 }

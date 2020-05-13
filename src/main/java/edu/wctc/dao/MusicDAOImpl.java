@@ -46,11 +46,21 @@ public class MusicDAOImpl implements MusicDAO{
     public void deleteMusic(int theId) {
         // Get current Hibernate session
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("delete from Music where id = :doomedMusicId" );
-
-        query.setParameter("doomedMusicId", theId);
-
+        // Select the object to get a persistent copy
+        Music doomedMusic = session.get(Music.class, theId);
+        /*Query query = session.createQuery("delete from MusicDetail where id = :doomedMusic");
+        query.setParameter("doomedMusic", theId);
         query.executeUpdate();
+        Query query1 = session.createQuery("delete from Music where id = :doomedMusic");
+        query1.executeUpdate();*/
+
+        //only delete if ID is valid
+        if (doomedMusic != null){
+            session.delete(doomedMusic);
+        }
+
+
+
     }
 
     @Override

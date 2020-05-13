@@ -61,7 +61,10 @@
     <bean id="myConversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
             <list>
-                <!--<bean class="edu.wctc.service.converter.StringToMusicConverter"/>-->
+                <bean class="edu.wctc.service.converter.StringToInstrumentConverter"/>
+                <bean class="edu.wctc.service.converter.StringToPublisherConverter"/>
+                <bean class="edu.wctc.service.converter.StringToFormatConverter"/>
+                <!--<bean class="edu.wctc.service.converter.StringToPublisherConverter.wctc.service.converter.StringToMusicConverter"/>-->
                 <!--<bean class="edu.wctc.service.converter.StringToDateConverter"/>-->
             </list>
         </property>

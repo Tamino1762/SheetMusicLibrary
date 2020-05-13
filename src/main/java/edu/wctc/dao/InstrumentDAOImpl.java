@@ -24,11 +24,11 @@ public class InstrumentDAOImpl implements InstrumentDAO {
     }
 
     @Override
-    public MusicInstrument getInstrument(int id) {
+    public MusicInstrument getInstrument(int instrumentId) {
         // Get current Hibernate session
         Session session = sessionFactory.getCurrentSession();
 
-        MusicInstrument instrument = session.get(MusicInstrument.class, id);
+        MusicInstrument instrument = session.get(MusicInstrument.class, instrumentId);
 
         return instrument;
     }

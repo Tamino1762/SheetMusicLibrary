@@ -34,8 +34,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    text-align: center;
-    width: 50%;
+    /*text-align: center;*/
+
+
 }
 #pic {
     display: block;
@@ -49,4 +50,11 @@ body {
 #search {
     width: 28%;
     border: black 2px;
+}
+.white {
+    color: white;
+}
+.add {
+    float: right;
+    padding-right: 20em;
 }

@@ -22,7 +22,7 @@ public class InstrumentServiceImpl implements InstrumentService {
 
     @Override
     @Transactional
-    public MusicInstrument getInstrument(int id) {
-        return instrumentDAO.getInstrument(id);
+    public MusicInstrument getInstrument(int instrumentId) {
+        return instrumentDAO.getInstrument(instrumentId);
     }
 }
